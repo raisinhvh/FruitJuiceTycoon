@@ -1,6 +1,3 @@
-local tickspeed = 1.5
-local stopafter = 999999999999999999999999999999999999999999999999999999
-
 local tycoons = workspace.Tycoons:GetChildren()
 local tycoon
 local lp = game.Players.LocalPlayer
