@@ -232,6 +232,8 @@ function Tick()
     end
 end
 
+print("Loaded raisin's juice hacks successfully. This is version 1.2"
+
 while wait(tickspeed) do    
    Tick()
 end
