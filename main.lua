@@ -43,7 +43,6 @@ local btexts = {
 
 local function fireproximityprompt(Obj, Amount, Skip)
     if Obj.ClassName == "ProximityPrompt" then 
-        print("Yay")
         Amount = Amount or 1
         local PromptTime = Obj.HoldDuration
         if Skip then 
@@ -161,7 +160,6 @@ function Tick()
                                 ButtonToBuy = buttons[b]
                             end
                         end
-                        print(ButtonToBuy)
                         if not ButtonToBuy then
                             local statue = tycoon.Purchased:FindFirstChild("Golden Tree Statue")
                             if not statue then
