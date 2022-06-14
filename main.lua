@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/raisinhvh/FruitJuiceTycoon/main/main.lua", true))()
+
 repeat wait() until game:IsLoaded()
 
 for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
