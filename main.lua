@@ -1,3 +1,4 @@
+print("Loaded raisin's juice hacks successfully. This is version 1.2"
 
 repeat wait() until game:IsLoaded()
 
@@ -231,8 +232,6 @@ function Tick()
         end
     end
 end
-
-print("Loaded raisin's juice hacks successfully. This is version 1.2"
 
 while wait(tickspeed) do    
    Tick()
