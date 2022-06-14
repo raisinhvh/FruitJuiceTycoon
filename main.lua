@@ -184,7 +184,18 @@ function Tick()
                                        if tycoon:FindFirstChild("Essentials") and tycoon:FindFirstChild("Purchased") and tycoon:FindFirstChild("Buttons") then
                                           fireproximityprompt(prompt, 1, true)
                                           wait(1)
-                                          repeat wait() until FindTycoon():FindFirstChild("Essentials")
+                                                
+                                          local function PissOnAnElephantsClitoris()
+                                             local ft = FindTycoon()
+                                             if ft then
+                                                if ft:FindFirstChild("Essentials") then
+                                                   return true
+                                                end
+                                             end
+                                             return false
+                                          end
+                                                
+                                          repeat wait() until PissOnAnElephantsClitoris()
                                           if lp.Character then
                                               if lp.Character.HumanoidRootPart then
                                                   lp.Character.HumanoidRootPart.Anchored = false
