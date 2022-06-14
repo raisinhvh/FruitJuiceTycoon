@@ -1,4 +1,4 @@
-print("Loaded raisin's juice hacks successfully. This is version 1.1.2"
+print("Loaded raisin's juice hacks successfully. This is version 1.1.2")
 
 repeat wait() until game:IsLoaded()
 
