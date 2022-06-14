@@ -1,8 +1,5 @@
-[[--
 
-wes please unban me from the discord im very sad now :(((
-
---]]
+--wes please unban me from the discord im very sad now :(((
 
 print("Loaded raisin's juice hacks successfully. This is version 1.1.2")
 
