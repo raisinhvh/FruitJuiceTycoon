@@ -15,6 +15,8 @@ local tycoons = workspace.Tycoons:GetChildren()
 local tycoon
 local lp = game.Players.LocalPlayer
 
+repeat wait() until lp.Character
+
 local LastObby = 0
 
 local maingui = Instance.new("ScreenGui", lp.PlayerGui)
@@ -104,12 +106,15 @@ if not tycoon then
        if tycoons[x].Owner.Value == nil then
             local gate = tycoons[x].Essentials:FindFirstChild("Entrance")
             if gate then
+              lp.Character.PrimaryPart = lp.Character:WaitForChild("HumanoidRootPart")
               lp.Character:SetPrimaryPartCFrame(CFrame.new(gate.Position))
               tycoon = tycoons[x]
             end
         end
     end
 end
+
+repeat wait() until tycoon
 
 local CanDoObby = true
 local curpickupconnection
