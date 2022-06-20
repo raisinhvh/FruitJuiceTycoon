@@ -1,5 +1,5 @@
 
---wes please unban me from the discord im very sad now :(((
+-- wes please unban me from the discord im very sad now :((((
 
 print("Loaded raisin's juice hacks successfully. This is version 1.1.2")
 
@@ -148,91 +148,87 @@ function Tick()
                 if lp.Character then
                     if not CanDoObby then
                         local ButtonToBuy
-                        if lp:FindFirstChild("Leaderstats") then
-                            local cash = lp.leaderstats.Money.Value
-                            local buttonsinstance = tycoon.Buttons
-                            local buttons = buttonsinstance:GetChildren()
-                            for b=1, #buttons do
-                                if buttons[b]:FindFirstChild("ButtonLabel") then
-                                    if buttons[b].ButtonLabel.CostLabel.Text ~= "FREE!" then
-                                        local price = string.gsub(buttons[b].ButtonLabel.CostLabel.Text, ",", "")
-                                        local buttonprice = tonumber(price)
-                                        if buttonprice <= cash then
-                                            if not (#buttons > 2 and buttons[b].Name == "AutoCollect") then
-                                              ButtonToBuy = buttons[b]
-                                            end
-                                        end
-                                    else
-                                        ButtonToBuy = buttons[b]
-                                    end
-                                end
-                            end
-                            if not ButtonToBuy then
-                                local statue = tycoon.Purchased:FindFirstChild("Golden Tree Statue")
-                                if not statue then
-                                    if lp.Character:FindFirstChild("Humanoid") then
-                                        lp.Character:SetPrimaryPartCFrame(CFrame.new(JuiceButton.Position) + Vector3.new(0, lp.Character.Humanoid.HipHeight + JuiceButton.Size.Y, 0))
-                                        local prompt = tycoon.Essentials.JuiceMaker.StartJuiceMakerButton.PromptAttachment.StartPrompt
-                                        delay(0.1, function()
-                                            if tycoon:FindFirstChild("Essentials") and tycoon:FindFirstChild("Purchased") and tycoon:FindFirstChild("Buttons") then
-                                                if prompt then
-                                                    fireproximityprompt(prompt, 1, true)
-                                                end
-                                            end
-                                        end)
-                                    end
-                                else
-                                 if lp.Character:FindFirstChild("HumanoidRootPart") then
-                                        local prompt = tycoon.Purchased["Golden Tree Statue"].StatueBottom.PrestigePrompt
-                                        lp.Character:SetPrimaryPartCFrame(CFrame.new(statue.StatueBottom.Position))
-                                        lp.Character.HumanoidRootPart.Anchored = true
-                                        pause = true
-                                        delay(1, function()
-                                           if tycoon:FindFirstChild("Essentials") and tycoon:FindFirstChild("Purchased") and tycoon:FindFirstChild("Buttons") then
-                                              fireproximityprompt(prompt, 1, true)
-                                              wait(1)
-
-                                              local function PissOnAnElephantsClitoris()
-                                                 local ft = FindTycoon()
-                                                 if ft then
-                                                    if ft:FindFirstChild("Essentials") then
-                                                       return true
-                                                    end
-                                                 end
-                                                 return false
-                                              end
-
-                                              repeat wait() until PissOnAnElephantsClitoris()
-                                              if lp.Character then
-                                                  if lp.Character.HumanoidRootPart then
-                                                      lp.Character.HumanoidRootPart.Anchored = false
-                                                      tycoon = FindTycoon()
-                                                      pause = false
-                                                      CalledOnStartAndRebirth()
-                                                   end
-                                                end
-                                            end
-                                        end)
+                        local cash = lp.leaderstats.Money.Value
+                        local buttonsinstance = tycoon.Buttons
+                        local buttons = buttonsinstance:GetChildren()
+                        for b=1, #buttons do
+                            if buttons[b].ButtonLabel.CostLabel.Text ~= "FREE!" then
+                                local price = string.gsub(buttons[b].ButtonLabel.CostLabel.Text, ",", "")
+                                local buttonprice = tonumber(price)
+                                if buttonprice <= cash then
+                                    if not (#buttons > 2 and buttons[b].Name == "AutoCollect") then
+                                      ButtonToBuy = buttons[b]
                                     end
                                 end
                             else
-                                lp.Character:SetPrimaryPartCFrame(CFrame.new(ButtonToBuy.Position) + Vector3.new(0,5,0))
-                                ButtonToBuy = nil
+                                ButtonToBuy = buttons[b]
                             end
-                        else  
-                              lp.Character:SetPrimaryPartCFrame(CFrame.new(ObbyGate.Position) - Vector3.new(0,10,0))
-                              pause = true
-                              delay(0.25, function()
-                                  if lp.Character then
-                                      if lp.Character:FindFirstChild("HumanoidRootPart") then
-                                          lp.Character:SetPrimaryPartCFrame(CFrame.new(ObbyEnd.Position) + Vector3.new(0,5,0))
-                                          wait(0.1)
-                                          LastObby = os.time()
-                                          pause = false
-                                      end
-                                 end
-                            end)
                         end
+                        if not ButtonToBuy then
+                            local statue = tycoon.Purchased:FindFirstChild("Golden Tree Statue")
+                            if not statue then
+                                if lp.Character:FindFirstChild("Humanoid") then
+                                    lp.Character:SetPrimaryPartCFrame(CFrame.new(JuiceButton.Position) + Vector3.new(0, lp.Character.Humanoid.HipHeight + JuiceButton.Size.Y, 0))
+                                    local prompt = tycoon.Essentials.JuiceMaker.StartJuiceMakerButton.PromptAttachment.StartPrompt
+                                    delay(0.1, function()
+                                        if tycoon:FindFirstChild("Essentials") and tycoon:FindFirstChild("Purchased") and tycoon:FindFirstChild("Buttons") then
+                                            if prompt then
+                                                fireproximityprompt(prompt, 1, true)
+                                            end
+                                        end
+                                    end)
+                                end
+                            else
+                             if lp.Character:FindFirstChild("HumanoidRootPart") then
+                                    local prompt = tycoon.Purchased["Golden Tree Statue"].StatueBottom.PrestigePrompt
+                                    lp.Character:SetPrimaryPartCFrame(CFrame.new(statue.StatueBottom.Position))
+                                    lp.Character.HumanoidRootPart.Anchored = true
+                                    pause = true
+                                    delay(1, function()
+                                       if tycoon:FindFirstChild("Essentials") and tycoon:FindFirstChild("Purchased") and tycoon:FindFirstChild("Buttons") then
+                                          fireproximityprompt(prompt, 1, true)
+                                          wait(1)
+                                                
+                                          local function PissOnAnElephantsClitoris()
+                                             local ft = FindTycoon()
+                                             if ft then
+                                                if ft:FindFirstChild("Essentials") then
+                                                   return true
+                                                end
+                                             end
+                                             return false
+                                          end
+                                                
+                                          repeat wait() until PissOnAnElephantsClitoris()
+                                          if lp.Character then
+                                              if lp.Character.HumanoidRootPart then
+                                                  lp.Character.HumanoidRootPart.Anchored = false
+                                                  tycoon = FindTycoon()
+                                                  pause = false
+                                                  CalledOnStartAndRebirth()
+                                               end
+                                            end
+                                        end
+                                    end)
+                                end
+                            end
+                        else
+                            lp.Character:SetPrimaryPartCFrame(CFrame.new(ButtonToBuy.Position) + Vector3.new(0,5,0))
+                            ButtonToBuy = nil
+                        end
+                    else  
+                          lp.Character:SetPrimaryPartCFrame(CFrame.new(ObbyGate.Position) - Vector3.new(0,10,0))
+                          pause = true
+                          delay(0.25, function()
+                              if lp.Character then
+                                  if lp.Character:FindFirstChild("HumanoidRootPart") then
+                                      lp.Character:SetPrimaryPartCFrame(CFrame.new(ObbyEnd.Position) + Vector3.new(0,5,0))
+                                      wait(0.1)
+                                      LastObby = os.time()
+                                      pause = false
+                                  end
+                             end
+                        end)
                     end
                 end
             end
