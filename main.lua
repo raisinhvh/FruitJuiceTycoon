@@ -148,7 +148,7 @@ function Tick()
                 if lp.Character then
                     if not CanDoObby then
                         local ButtonToBuy
-                        if lp.leaderstats then
+                        if lp:FindFirstChild("Leaderstats") then
                             local cash = lp.leaderstats.Money.Value
                             local buttonsinstance = tycoon.Buttons
                             local buttons = buttonsinstance:GetChildren()
