@@ -15,6 +15,8 @@ local tycoons = workspace.Tycoons:GetChildren()
 local tycoon
 local lp = game.Players.LocalPlayer
 
+repeat wait() until lp.Character
+
 local LastObby = 0
 
 local maingui = Instance.new("ScreenGui", lp.PlayerGui)
