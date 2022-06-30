@@ -1,7 +1,6 @@
-
 -- wes please unban me from the discord im very sad now :((((
 
-print("Loaded raisin's juice hacks successfully. This is version 1.1.2")
+print("Loaded raisin's juice hacks successfully. This is version 1.1.3")
 
 repeat wait() until game:IsLoaded()
 
@@ -157,16 +156,18 @@ function Tick()
                         local buttonsinstance = tycoon.Buttons
                         local buttons = buttonsinstance:GetChildren()
                         for b=1, #buttons do
-                            if buttons[b].ButtonLabel.CostLabel.Text ~= "FREE!" then
-                                local price = string.gsub(buttons[b].ButtonLabel.CostLabel.Text, ",", "")
-                                local buttonprice = tonumber(price)
-                                if buttonprice <= cash then
-                                    if not (#buttons > 2 and buttons[b].Name == "AutoCollect") then
-                                      ButtonToBuy = buttons[b]
+                            if buttons[b]:FindFirstChild("ButtonLabel") then
+                                if buttons[b].ButtonLabel.CostLabel.Text ~= "FREE!" then
+                                    local price = string.gsub(buttons[b].ButtonLabel.CostLabel.Text, ",", "")
+                                    local buttonprice = tonumber(price)
+                                    if buttonprice <= cash then
+                                        if not (#buttons > 2 and buttons[b].Name == "AutoCollect") then
+                                          ButtonToBuy = buttons[b]
+                                        end
                                     end
+                                else
+                                    ButtonToBuy = buttons[b]
                                 end
-                            else
-                                ButtonToBuy = buttons[b]
                             end
                         end
                         if not ButtonToBuy then
